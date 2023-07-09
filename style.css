@@ -1,0 +1,128 @@
+
+/* css reset */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.destroy{
+    transform: rotate(180deg);
+
+}
+
+
+body{
+    background-color: red;
+    overflow: hidden;
+
+}
+
+.score-container{
+    font-size: 2.3rem;
+    margin-left: 50px;
+    padding-top: 30px;
+}
+
+.game-container{
+    background: url('imgs/bg.jpg') no-repeat center center/cover;
+    width: 100%;
+    height: 100vh;
+}
+
+.dino{
+    position:absolute;
+    bottom: 110px;
+    left: 300px;
+}
+
+.obstacle{
+    position: absolute;
+    right: 100px;
+    bottom: 110px;
+}
+
+ .game-over{
+    visibility: hidden;
+    font-size: 10rem;
+    position:absolute;
+    left: 400px;
+    top:300px
+} 
+
+.animate-obstacle
+{
+  
+    animation: obs 2s ease-in infinite;
+}
+
+@keyframes obs {
+
+    0%{
+        left: 100vw;
+    
+    }
+
+    100%{
+        left: -10vw;
+    }
+    
+}
+
+.animate-dino{
+    animation: dino 1s ease-out;
+}
+
+@keyframes dino {
+
+    0%{
+        bottom: 110px;
+    }
+
+    50%{
+       bottom:520px;
+    }
+
+    100%{
+        bottom: 110px;
+    }
+    
+}
+
+/* to make it responsive */
+
+
+@media (max-width:1200px) {
+
+    .dino{
+         bottom:160px; 
+         left: 230px;
+         width: 80px;
+         height: 150px;
+    }
+
+    .obstacle{
+        bottom: 200px;
+        width: 80px;
+        height: 140px;
+        right:200px ;
+     
+    }
+
+    .game-over{
+        font-size: 2.8rem;
+        left: 500px;
+    }
+
+    
+    
+}
+
+
+
+
+
+
+
+
